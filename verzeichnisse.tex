@@ -1,0 +1,46 @@
+%Verzeichnisse
+
+% vor dem Hauptteil römische Seitenzahlen verwenden
+\pagenumbering{Roman}
+\newpage
+% dies ist die erste Seite bezüglich der Seitenzahlen
+\setcounter{page}{1}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Abkürzungsverzeichnis
+\phantomsection \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}[ECC 6.0] % für die Ausrichtung die längste Abk. hier in eckigen Klammern
+% \acro{ERP}{Enterprise-Resource-Planning} 
+% \acro{ETL}{Extract, Transform, Load} 
+ \acro{CS}{Column-Store, spaltenorientierter Datenspeicher} 
+ \acro{CSV}{Comma Separated Values, Plaintext-Datenformat} 
+ \acro{DBMS}{Datenbankmanagementsystem} 
+ \acro{DRAM}{Dynamischer RAM, 1 Transistor + 1 Kondensator pro Bit, langsamer als SRAM} 
+ \acro{ECC}{SAP Enterprise Core Component} 
+ \acro{HDD}{Hard Disk Drive, Laufwerk mit Magnetspeicher-Platten} 
+ \acro{HCP}{HANA Cloud Platform} 
+ \acro{OLAP}{Online Analytical Processing, Datenanalyse von Geschäftsdaten} 
+ \acro{OLTP}{Online Transaction Processing, Online-Transaktionsverarbeitung} 
+ \acro{RAM}{Random Access Memory, Arbeitsspeicher} 
+ \acro{RS}{Row-Store, zeilenorientierter Datenspeicher} 
+% \acro{SaaS}{Software as a Service, Software als Dienstleistung} 
+ \acro{SSD}{Solid State Drive, Halbleiterlaufwerk (Flash-EPROM-Speicher)} 
+ \acro{SRAM}{Statischer RAM, 6 Transistoren pro Bit, schneller und teurer als DRAM} 
+
+\end{acronym}
+
+% ggf. Abbildungsverzeichnis auf eine neue Seite
+ \newpage 
+ \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+ \listoffigures
+
+% ggf. Tabellenverzeichnis
+ \addcontentsline{toc}{section}{Tabellenverzeichnis}
+ \listoftables
+
+\newpage
+\pagenumbering{arabic}
